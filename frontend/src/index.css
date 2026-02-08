@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-primary: #4CAF50;
+	--color-secondary: #2E7D32;
+	--color-dark: #212121;
+	--color-light: #F5F5F5;
+	--color-accent: #FFC107;
+}
+
+html, body, #root {
+	height: 100%;
+}
+
+body {
+	font-family: Roboto, system-ui, -apple-system, 'Segoe UI', sans-serif;
+	background-color: var(--color-light);
+	color: var(--color-dark);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+}
+
+/* Small helpers for components that use semantic classes */
+.text-primary { color: var(--color-primary); }
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.text-dark { color: var(--color-dark); }
+.bg-dark { background-color: var(--color-dark); }
+.bg-light { background-color: var(--color-light); }
+
+/* Smooth utility transitions for interactive elements */
+.transition-smooth { transition: all 200ms cubic-bezier(.2,.8,.2,1); }
+
+/* Reduce large empty spaces on small screens */
+section { padding-left: 0.75rem; padding-right: 0.75rem; }
+
+/* Ensure hero image covers nicely on mobile */
+.bg-hero-pattern { background-position: center; background-size: cover; }
